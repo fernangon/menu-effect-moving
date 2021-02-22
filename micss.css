@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,500;1,700&display=swap');
+
+
+body {
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+
+    font-family: 'Roboto', sans-serif;
+
+    background: lightslategray;
+}
+
+
+nav {
+    /*  flex: 
+            es el shorthand para: 
+            [ flex-grow, flex-shrink, flex-basis ]  (en ese orden). 
+    */
+    flex: 1 1 1;
+    align-self: center;
+}
+
+
+a {
+    display: inline-block;
+
+    padding: 1.2rem;
+
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .2rem;
+
+    background: blueviolet;
+    color: whitesmoke;
+
+    transform: rotateX(0deg);
+}
+
+a:hover {
+    background: #213240;
+    color: yellow;
+
+    animation: rotardelado .5s cubic-bezier(.53, .23, .61, 1.25) forwards;
+}
+
+/*  The :active selector is used to select and style the active link.
+
+    A link becomes active when you click on it.
+
+    :active MUST come after :hover (if present) in the CSS definition in order to be effective! 
+*/
+a:active {
+    background: #1a242f;
+}
+
+/* La pseudo-clase :first-child de CSS representa el primer elemento entre un grupo de elementos hermanos. */
+a:first-child {
+    padding-left: 2rem;
+
+    border-radius: 2rem 0 0 2rem;
+}
+
+a:last-child {
+    padding-right: 2rem;
+
+    border-radius: 0 2rem 2rem 0;
+}
+
+
+/* KEYFRAMES -------------------------------------------------------------------------------------------- */
+
+@keyframes rotardelado {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg); 
+    }
+}
+
+
+
+
+
